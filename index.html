@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peta Persebaran Potensi Desa Cintakarya</title>
+
+    <!-- LEAFLET CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+    <!-- CSS SENDIRI -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>PETA PERSEBARAN POTENSI DESA CINTAKARYA</h1>
+        <p>Kecamatan Parigi • Kabupaten Pangandaran</p>
+    </header>
+
+    <!-- LAYOUT UTAMA -->
+    <main class="layout">
+
+        <!-- PETA UTAMA -->
+        <section class="map-section">
+            <div id="map"></div>
+        </section>
+
+        <!-- SIDEBAR KANAN -->
+        <aside class="sidebar">
+
+            <!-- PETA MINI -->
+            <div class="panel">
+                <h2>🗺️ Peta Lokasi</h2>
+                <p class="panel-subtitle">OpenStreetMap</p>
+                <div id="mini-map"></div>
+            </div>
+
+            <!-- PANEL DETAIL DINAMIS (WADAH UTAMA KETIKA DIKLIK) -->
+            <div class="panel" id="panel-detail">
+                <h2>📍 Keterangan Potensi</h2>
+                <p class="panel-subtitle">Detail lokasi yang dipilih</p>
+                
+                <!-- KONTEN INI AKAN BERUBAH 1 PER 1 SESUAI YANG DIKLIK DI MAPS -->
+                <div id="konten-detail">
+                    <div style="font-size: 13px; color: #64748b; text-align: center; padding: 15px 5px; background: #f8fafc; border-radius: 8px; border: 1px dashed #cbd5e1;">
+                        👈 <b>Klik pada Peta</b> (salah satu Dusun atau titik UMKM) untuk melihat informasinya secara detail di sini.
+                    </div>
+                </div>
+            </div>
+
+            <!-- KETERANGAN / LEGENDA SIMBOL -->
+            <div class="panel marker-info">
+                <h2>📌 Legenda</h2>
+                <p><span class="marker-example">📍</span> Titik UMKM & Wisata</p>
+                <p><span class="garis-example"></span> Batas Wilayah Dusun</p>
+            </div>
+
+        </aside>
+
+    </main>
+
+    <!-- LEAFLET JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- DATA & SCRIPT UTAMA -->
+    <script src="data.js"></script>
+    <script src="dusun.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
